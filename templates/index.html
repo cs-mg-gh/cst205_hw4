@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+</head>
+<body>
+<div class="container text-center mt-5" align ="center">
+    <h1>Welcome to Matthew's Random Image Gallery</h1>
+    <div class="row">
+        {% for image in images %}
+        <div class="col-md-4">
+            <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ image }}" class="img-fluid mb-3">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>

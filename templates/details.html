@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h1>{{ title }} by {{ author }}</h1>
+<img src="{{ url_for('static', filename='images/' + image_file) }}" alt="{{ title }}" style="max-width:100%; height:auto;">
+<p><strong>Format:</strong> {{ format_ }}</p>
+<p><strong>Mode:</strong> {{ mode }}</p>
+<p><strong>Width:</strong> {{ width }} pixels</p>
+<p><strong>Height:</strong> {{ height }} pixels</p>
+<a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>
